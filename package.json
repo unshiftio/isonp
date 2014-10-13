@@ -1,0 +1,34 @@
+{
+  "name": "isonp",
+  "version": "0.0.0",
+  "description": "iframe sent object ninja polling, basically JSONP in iframes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "jsonp",
+    "ijson",
+    "ison",
+    "isonp",
+    "iframe",
+    "polling",
+    "long",
+    "short",
+    "shortpolling",
+    "longpolling"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "dependencies": {
+    "emits": "1.0.1",
+    "eventemitter3": "0.1.5",
+    "frames": "0.0.x",
+    "htmlfile": "0.0.x",
+    "one-time": "0.0.x",
+    "target": "0.0.x",
+    "tick-tock": "0.0.x"
+  },
+  "browser": "isonp.js"
+}
