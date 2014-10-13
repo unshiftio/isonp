@@ -30,5 +30,9 @@
     "target": "0.0.x",
     "tick-tock": "0.0.x"
   },
-  "browser": "isonp.js"
+  "browser": "isonp.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unshiftio/isonp"
+  }
 }
