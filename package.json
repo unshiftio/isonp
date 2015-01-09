@@ -28,7 +28,8 @@
     "htmlfile": "0.0.x",
     "one-time": "0.0.x",
     "target": "0.0.x",
-    "tick-tock": "0.0.x"
+    "tick-tock": "0.0.x",
+    "vary": "1.0.x"
   },
   "browser": "isonp.js",
   "repository": {

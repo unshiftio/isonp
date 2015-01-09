@@ -120,16 +120,18 @@ ISONP.prototype.write = function write(msg, fn) {
  * @api private
  */
 ISONP.prototype.poll = function poll(fn) {
-  var script
+  var next
+    , script
     , isonp = this
     , doc = this.document
     , id = (this.i++).toString()
     , url = parse(this.url, true)
     , name = this.global +'.'+ id;
 
-  this.env[this.global][id] = one(function onetime(err, data) {
+  next = this.env[this.global][id] = one(function onetime(err, data) {
     isonp.clear(name);
     delete isonp.env[isonp.gobal][id];
+    if (script) script.onload = script.onreadystatechange = null;
 
     if ('function' === typeof fn) fn(err, data);
 
@@ -145,6 +147,24 @@ ISONP.prototype.poll = function poll(fn) {
 
   script = doc.createElement('script');
   script.async = true;
+
+  script.onload = script.onreadystatechange = function load() {
+    if (!(script.readyState in { complete: 1, loaded: 1 })) return;
+
+    next();
+  };
+
+  script.src = this.src(name);
+};
+
+/**
+ *
+ * @param {String} name Name of the callback function.
+ * @returns {String}
+ * @api public
+ */
+ISONP.prototype.src = function src(name) {
+
 };
 
 /**
