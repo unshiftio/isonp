@@ -22,14 +22,14 @@
   "author": "Arnout Kazemier",
   "license": "MIT",
   "dependencies": {
-    "emits": "1.0.1",
-    "eventemitter3": "0.1.5",
+    "emits": "3.0.0",
+    "eventemitter3": "2.0.2",
     "frames": "0.0.x",
-    "htmlfile": "0.0.x",
+    "htmlfile": "~0.1.2",
     "one-time": "0.0.x",
     "target": "0.0.x",
-    "tick-tock": "0.0.x",
-    "vary": "1.0.x"
+    "tick-tock": "~1.0.0",
+    "vary": "~1.1.0"
   },
   "browser": "isonp.js",
   "repository": {
